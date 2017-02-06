@@ -11,6 +11,6 @@ public class MessageResource {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getMessages(){
-		return "hello word";
+		return "hello word Prasad";
 	}
 }
