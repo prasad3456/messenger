@@ -1,24 +1,20 @@
 package org.prasad.webservcies.messenger.resources;
 
 import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import org.prasad.webservcies.messenger.model.Message;
-import org.prasad.webservcies.messenger.service.MessageService;
+import org.prasad.webservcies.messenger.service.ProfileMessageService;
 
-@Path("/messages")
-public class MessageResource {
+@Path("/profileMessage")
+public class ProfileMessageResource {
 
-	MessageService mService=new MessageService();
+	ProfileMessageService pService=new ProfileMessageService();
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public List<Message> getMessages(){
-		return mService.getAllMessages();
+	public List<Message> getAllProfileMessage(){
+		return pService.getAllProfileMessages();
 	}
-	
-	
 }
