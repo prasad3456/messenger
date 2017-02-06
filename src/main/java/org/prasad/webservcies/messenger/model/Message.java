@@ -2,6 +2,9 @@ package org.prasad.webservcies.messenger.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Message {
 
 	private long id;
@@ -9,7 +12,9 @@ public class Message {
 	private Date created;
 	private String author;
 	
-	
+	public Message(){
+		
+	}
 	
 	public Message(long id, String message, String author) {
 		
